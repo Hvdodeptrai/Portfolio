@@ -24,7 +24,14 @@ body {
     overflow-x: hidden;
     font-size: 62.5%;
 }
-
+.container {
+    width: min(90%, 800px);
+    margin: 30px auto;
+}
+.container-fluid {
+    width: 100%;
+    /* padding: 10px 0; */
+}
 /* SIDEBAR */
 .sidebar {
     position: fixed;
@@ -148,9 +155,7 @@ label #cancel {
 #check:checked ~ .wrapper {
     margin-left: 249px;
 }
-.container {
-    padding: 10px 100px;
-}
+
 /* SECTION TOP-BAR */
 .top-bar {
     background: transparent;
@@ -296,7 +301,7 @@ label #cancel {
     width: 200px;
     border: none;
     outline: none;
-    border-radius: 20px;
+    border-radius: 5px;
 
     color: white;
     background-color: #9b5de5;
@@ -306,8 +311,13 @@ label #cancel {
 
     box-shadow: 0 0 10px 0 rgba(154, 93, 229, 0.74);
     cursor: pointer;
-}
 
+    transition: all 0.25s ease;
+}
+.hero-img__inside button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 10px 0 rgba(154, 93, 229, 0.288);
+}
 /* SECTION PROFES */
 .profes {
     margin: 15px 0;
@@ -363,7 +373,7 @@ label #cancel {
     margin-bottom: 20px;
     margin: 0 auto;
 
-    transition: all 0.5s linear;
+    transition: all 0.4s linear;
     transform: translateY(20px);
 }
 .card-img:hover {
@@ -397,15 +407,16 @@ label #cancel {
 }
 
 /* SECTION CIRCLE */
-.circle {
-    background-color: #9b5de5;
-    margin: 15px 0;
-}
+
+
 /* CIRCLE ITEM */
 .row2 {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 10px 0;
+
+    background-color: #9b5de5;
 }
 .row2 > .col {
     width: 20%;
