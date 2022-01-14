@@ -23,6 +23,9 @@ body {
     width: 100vw;
     overflow-x: hidden;
 }
+.container {
+    padding: 30px 100px;
+}
 .row {
     display: flex;
     justify-content: space-between;
@@ -31,7 +34,6 @@ body {
 /* SECTION TOP-BAR */
 .top-bar {
     background-color: white;
-    padding: 10px 50px;
 }
 
 /* LOGO */
@@ -147,9 +149,6 @@ body {
 }
 
 /* SECTION PROFES */
-.profes {
-    padding: 10px 50px;
-}
 .single {
     width: 100%;
 }
@@ -234,7 +233,6 @@ body {
 /* SECTION CIRCLE */
 .circle {
     background-color: #9b5de5;
-    padding: 20px 50px;
 }
 /* CIRCLE ITEM */
 .row2 {
@@ -276,9 +274,7 @@ body {
 }
 
 /* SECTION PORTFOLIO */
-.portfolio {
-    padding: 20px 50px;
-}
+
 .col2 {
     display: flex;
     justify-content: center;
