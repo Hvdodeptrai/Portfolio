@@ -30,8 +30,8 @@ body {
 }
 
 /* LOGO */
-.col:first-child {
-    width: 30%;
+.top-bar__logo {
+    width: 25%;
 }
 .top-bar__logo {
     width: 10%;
