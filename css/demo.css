@@ -441,7 +441,7 @@ body {
     margin-top: 10px;
 }
 .post-content > span {
-
+    color: #ccc;
 }
 .post-content img {
     width: 100%;
