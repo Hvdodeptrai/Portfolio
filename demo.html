@@ -4,401 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook</title>
+    <title>Weather App</title>
 
     <link rel="stylesheet" href="./css/demo.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="topbar">
-        <div class="container">
-            <div class="row">
-                <div class="topbar-left">
-                    <div class="logo">
-                        <i class='bx bxl-facebook' ></i>
-                        <h4>acebook</h4>
-                    </div>
-                    <ul class="topbar-notify">
-                        <li><a href="#"><i class='bx bxs-bell-ring'></i></a></li>
-                        <li><a href="#"><i class='bx bx-mail-send' ></i></a></li>
-                        <li><a href="#"><i class='bx bx-tv' ></i></a></li>
-                    </ul>
-                </div>
 
-                <div class="topbar-right">
-                    <div class="search">
-                        <i class='bx bx-search' ></i>
-                        <input type="text" placeholder="Search">
-                    </div>
-                    <div class="status" onclick="settingsMenuToggle()">
-                        <img src="images/avt.jpg">
-                        <i class='bx bxs-circle' ></i>
-                    </div>
-                </div>
-
-                <div class="settings">
-
-                    <div id="dark-btn">
-                        <span></span>
-                    </div>
-
-                    <div class="settings-top">
-                        <img src="images/avt.jpg">
-                        <div class="top-right">
-                            <h4>Huỳnh Vĩnh Đồ</h4>
-                            <span>View your profile</span>
-                        </div>
-                    </div>
-                    <ul class="main-settings">
-                        <li class="main-settings-top"><a href="#">
-                            <i class='bx bxs-comment-error' ></i>
-                            <div class="main-right1">
-                                <span>Give Feedback</span>
-                                <p>Help us to improve the new design</p>
-                            </div>
-                        </a></li>
-                        <li><a href="#">
-                            <i class='bx bx-user-circle'></i>
-                            <div class="main-right">
-                                <span>Settings & Privacy</span>
-                                <i class='bx bx-chevron-right' ></i>
-                            </div>
-                        </a></li>
-                        <li><a href="#">
-                            <i class='bx bx-help-circle' ></i>
-                            <div class="main-right">
-                                <span>Help & Support</span>
-                                <i class='bx bx-chevron-right' ></i>
-                            </div>
-                        </a></li>
-                        <li><a href="#">
-                            <i class='bx bxs-moon' ></i>
-                            <div class="main-right">
-                                <span>Display & Accessibility</span>
-                                <i class='bx bx-chevron-right' ></i>
-                            </div>
-                        </a></li>
-                        <li><a href="#">
-                            <i class='bx bx-log-in' ></i>
-                            <div class="main-right">
-                                <span>Logout</span>
-                                <i class='bx bx-chevron-right' ></i>
-                            </div>
-                        </a></li>
-                        
-                    </ul>
-                </div>
-            </div>
+    <section class="music">
+      <header>
+        <div class="title">
+          <h1>Tap Music</h1>
+          <span>Create sounds with just one tap</span>
         </div>
+      </header>
+
+      <main>
+        <div class="visual"></div>
+        <div class="pads">
+          <div class="pad1">
+            <audio class="sound" src="./Sounds/sounds_bubbles.mp3"></audio>
+          </div>
+          <div class="pad2">
+            <audio class="sound" src="./Sounds/sounds_clay.mp3"></audio>
+          </div>
+          <div class="pad3">
+            <audio class="sound" src="./Sounds/sounds_confetti.mp3"></audio>
+          </div>
+          <div class="pad4">
+            <audio class="sound" src="./Sounds/sounds_glimmer.mp3"></audio>
+          </div>
+          <div class="pad5">
+            <audio class="sound" src="./Sounds/sounds_moon.mp3"></audio>
+          </div>
+          <div class="pad6">
+            <audio class="sound" src="./Sounds/sounds_ufo.mp3"></audio>
+          </div>
+        </div>
+      </main>
     </section>
 
-    <div class="container1">
-        <!-- *****left sidebar *****-->
-        <div class="left-sidebar">
-            <ul class="page-item">
-                <li><a href="#">
-                    <img src="https://www.facebook.com/rsrc.php/v3/yr/r/2uPlV4oORjU.png" alt="">
-                    Latest News
-                </a></li>
-                <li><a href="#">
-                    <img src="https://www.facebook.com/rsrc.php/v3/yx/r/-XF4FQcre_i.png" alt="">
-                    Friends
-                </a></li>
-                <li><a href="#">
-                    <img src="https://www.facebook.com/rsrc.php/v3/yD/r/mk4dH3FK0jT.png" alt="">
-                    Group
-                </a></li>
-                <li><a href="#">
-                    <img src="https://www.facebook.com/rsrc.php/v3/ys/r/9BDqQflVfXI.png" alt="">
-                    Marketplace
-                </a></li>
-                <li><a href="#">
-                    <img src="https://www.facebook.com/rsrc.php/v3/yG/r/A1HlI2LVo58.png" alt="">
-                    Watch
-                </a></li>
-                <span>See More</span>
-            </ul>
+  <script src="main.js"></script>
 
-            <div class="shortcuts">
-                <span>Your Shortcuts</span>
-                <div class="shortcuts-item">
-                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80" alt="">
-                    Web Developers
-                </div>
-                <div class="shortcuts-item">
-                    <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1275&q=80" alt="">
-                    Web Design Course
-                </div>
-                <div class="shortcuts-item">
-                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1274&q=80" alt="">
-                    Fullstack Development
-                </div>
-                <div class="shortcuts-item">
-                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
-                    Website Experts
-                </div>
-            </div>
-        </div>
-
-        <!-- *****main content *****-->
-        <div class="main-content">
-            <div class="story-gallery">
-                <div class="story story1">
-                    <img src="images/avt.jpg">
-                    <i class='bx bx-plus-circle' ></i>
-                    <span>Post Story</span>
-                </div>
-                <div class="story story2">
-                    <img src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t1.6435-9/119164490_1045309759260206_6574116426682256117_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=wCwXOQfoiLYAX8cX2J7&_nc_ht=scontent.fsgn5-12.fna&oh=00_AT-eGO-4TZ0R5aLU6QgXlIjl3h3Y8IJWF0hqDILik0AgMg&oe=62098A20">
-                    <div class="corner">
-                        <img src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t1.6435-9/202790138_1241630766294770_897281708663391223_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=_mxDm9AZBwIAX8BsA_E&_nc_ht=scontent.fsgn5-12.fna&oh=00_AT-Bjio99Ck_Bj9rVeswiSkAG4k6GJXVBbPDXnC6tD6tjQ&oe=620865BC">
-                    </div>
-                    <span>Đỗ Ái Hà</span>
-                </div>
-                <div class="story story3">
-                    <img src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.6435-1/p320x320/117348955_221851825928962_2855685385106120360_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=7206a8&_nc_ohc=8l_S12DtJdMAX-QLXy3&tn=7cR-BzFeINTYXUcE&_nc_ht=scontent.fsgn5-8.fna&oh=00_AT-h7EtkOsf8DWb8bekLmBg_Th8vRs2jZmwA5mLNnI6D8g&oe=6208D9BE">
-                    <div class="corner">
-                        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/270150059_471329057834683_279029416620122547_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=aee45a&_nc_ohc=SlYYW8COIAsAX9Gm-bO&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVLhjsOJ7h1fFzcmYUxqll8nKowbSWA_n23iC_kp96BKKg&oe=620B2297">
-                    </div>
-                    <span>Đỗ Vĩ Thuận</span>
-                </div>
-                <div class="story story4">
-                    <img src="https://sohanews.sohacdn.com/thumb_w/1000/160588918557773824/2022/1/6/photo1641438412407-1641438412523153010393.jpg">
-                    <div class="corner">
-                        <img src="https://th.bing.com/th/id/OIF.xoyBVmwwzxVDBNW1WIFQJw?pid=ImgDet&rs=1">
-                    </div>
-                    <span>Lê Tùng Vân</span>
-                </div>
-                <div class="story story5">
-                    <img src="https://th.bing.com/th/id/OIP.3v2_Xu9VI_Lr3A2IWxJ-EwHaLF?pid=ImgDet&rs=1">
-                    <div class="corner">
-                        <img src="https://avatar-ex-swe.nixcdn.com/singer/avatar/2019/10/30/4/0/0/1/1572405540270_600.jpg">
-                    </div>
-                    <span>Hưng Đàm</span>
-                </div>
-            </div>
-
-            <div class="status1">
-                <div class="status1-profile">
-                    <img src="images/avt.jpg">
-                    <div class="public">
-                        <span>Huỳnh Vĩnh Đồ</span>
-                        <label for="">
-                            <p>Public</p>
-                            <i class='bx bxs-down-arrow' ></i>
-                        </label>
-                    </div>
-                </div>
-
-                <textarea class="text" placeholder="What's on your mind, Do?" cols="74" rows="5"></textarea>
-
-                <ul class="emote">
-                    <li><a href="#">
-                        <i class='bx bxs-camera-movie' ></i>
-                        Live Video
-                    </a></li>
-                    <li><a href="#">
-                        <i class='bx bxs-camera' ></i>
-                        Photo/Video
-                    </a></li>
-                    <li><a href="#">
-                        <i class='bx bx-smile' ></i>
-                        Feeling/Activity
-                    </a></li>
-                </ul>
-            </div>
-
-            <div class="post">
-                <div class="post-info">
-                    <img src="images/avt.jpg">
-                    <div class="detail">
-                        <span>Huỳnh Vĩnh Đồ</span>
-                        <p>April 11 2021, 11:11 pm</p>
-                    </div>
-                    <i class='bx bx-dots-vertical-rounded' ></i>
-                </div>
-                <div class="post-content">
-                    <span>
-                        Anh...
-                    </span>
-                    <img src="images/bby.jpg" alt="">
-
-                    <div class="post-row">
-                        <div class="common">
-                            <div class="like">
-                                <i class='bx bxs-like' ></i>
-                                <span>16</span>
-                            </div>
-                            <div class="comment">
-                                <i class='bx bxs-chat' ></i>
-                                <span>03</span>
-                            </div>
-                            <div class="share">
-                                <i class='bx bxs-share' ></i>
-                                <span>2003</span>
-                            </div>
-
-                        </div>
-
-                        <div class="more">
-                            <img src="images/avt.jpg">
-                            <i class='bx bxs-down-arrow' ></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="post-info two">
-                    <img src="images/avt.jpg">
-                    <div class="detail">
-                        <span>Huỳnh Vĩnh Đồ</span>
-                        <p>April 11 2021, 13:40 pm</p>
-                    </div>
-                    <i class='bx bx-dots-vertical-rounded' ></i>
-                </div>
-                <div class="post-content">
-                    <span>
-                        yeu...
-                    </span>
-                    <img src="images/image1.jpg" alt="">
-
-                    <div class="post-row">
-                        <div class="common">
-                            <div class="like">
-                                <i class='bx bxs-like' ></i>
-                                <span>28</span>
-                            </div>
-                            <div class="comment">
-                                <i class='bx bxs-chat' ></i>
-                                <span>06</span>
-                            </div>
-                            <div class="share">
-                                <i class='bx bxs-share' ></i>
-                                <span>2004</span>
-                            </div>
-
-                        </div>
-
-                        <div class="more">
-                            <img src="images/avt.jpg">
-                            <i class='bx bxs-down-arrow' ></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="post-info three">
-                    <img src="images/avt.jpg">
-                    <div class="detail">
-                        <span>Huỳnh Vĩnh Đồ</span>
-                        <p>April 11 2021, 16:30 pm</p>
-                    </div>
-                    <i class='bx bx-dots-vertical-rounded' ></i>
-                </div>
-                <div class="post-content big-img">
-                    <span>
-                        Em❤️
-                    </span>
-                    <img src="images/image4.jpg">
-                    <div class="post-row">
-                        <div class="common">
-                            <div class="like">
-                                <i class='bx bxs-like' ></i>
-                                <span>11</span>
-                            </div>
-                            <div class="comment">
-                                <i class='bx bxs-chat' ></i>
-                                <span>04</span>
-                            </div>
-                            <div class="share">
-                                <i class='bx bxs-share' ></i>
-                                <span>2021</span>
-                            </div>
-                        </div>
-                        <div class="more">
-                            <img src="images/avt.jpg">
-                            <i class='bx bxs-down-arrow' ></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button type="button" class="load-btn">Load More</button>
-        </div>
-
-        <!-- *****right sidebar *****-->
-        <div class="right-sidebar">
-            <div class="events">
-                <div class="event-title">
-                    <h4>Events</h4>
-                    <span>See All</span>
-                </div>
-                <div class="event-content">
-                    <div class="content-left">
-                        <h4>16</h4>
-                        <span>March</span>
-                    </div>
-                    <div class="content-right">
-                        <h4> Happy Birthday</h4>
-                        <span><i class='bx bx-location-plus' ></i> Ho Chi Minh</span>
-                        <p>More Info</p>
-                    </div>
-                </div>
-                <div class="event-content">
-                    <div class="content-left">
-                        <h4>28</h4>
-                        <span>June</span>
-                    </div>
-                    <div class="content-right">
-                        <h4> Happy Birthday</h4>
-                        <span><i class='bx bx-location-plus' ></i> Ho Chi Minh</span>
-                        <p>More Info</p>
-                    </div>
-                </div>
-            </div>
-            <div class="advert">
-                <div class="advert-title">
-                    <h4>Anniversary</h4>
-                    <span>Close</span>
-                </div>
-                <img src="images/bby.jpg">
-            </div>
-            <div class="converse">
-                <div class="converse-title">
-                    <h4>Conversation</h4>
-                    <span>Hide Chat</span>
-                </div>
-                <div class="online">
-                    <div class="online-img">
-                        <img src="https://avatar-ex-swe.nixcdn.com/singer/avatar/2019/10/30/4/0/0/1/1572405540270_600.jpg">
-                        <i class='bx bxs-circle' ></i>
-                    </div>
-                    <p>Đàm Vĩnh Hưng</p>
-                </div>
-                <div class="online">
-                    <div class="online-img">
-                        <img src="https://th.bing.com/th/id/OIF.xoyBVmwwzxVDBNW1WIFQJw?pid=ImgDet&rs=1">
-                        <i class='bx bxs-circle' ></i>
-                    </div>
-                    <p>Lê Tùng Vân</p>
-                </div>
-                <div class="online">
-                    <div class="online-img">
-                        <img src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.6435-1/p320x320/117348955_221851825928962_2855685385106120360_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=7206a8&_nc_ohc=8l_S12DtJdMAX-QLXy3&tn=7cR-BzFeINTYXUcE&_nc_ht=scontent.fsgn5-8.fna&oh=00_AT-h7EtkOsf8DWb8bekLmBg_Th8vRs2jZmwA5mLNnI6D8g&oe=6208D9BE">
-                        <i class='bx bxs-circle' ></i>
-                    </div>
-                    <p>Đỗ Vĩ Thuận</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>Copyright 2022 - Technophile Guy</p>
-    </div>
-
-    <script src="main.js"></script>
 </body>
 </html>

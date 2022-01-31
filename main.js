@@ -1,10 +1,29 @@
-const settingsmenu = document.querySelector(".settings");
-const darkBtn = document.getElementById("dark-btn");
+const pads = document.querySelectorAll('.pads div');
+const sounds = document.querySelectorAll('.sound');
+const visual = document.querySelector('.visual');
 
-function settingsMenuToggle() {
-    settingsmenu.classList.toggle("settings-height");
-}
-darkBtn.onclick = function() {
-    darkBtn.classList.toggle("dark-btn-on");
-    document.body.classList.toggle("dark-theme");
+const colors = [
+    "aqua",
+    "blue",
+    "blueviolet",
+    "yellow",
+    "coral",
+    "red"
+]
+
+pads.forEach(function(pad, index) {
+    pad.addEventListener('click', () => {
+        sounds[index].currentTime = 0;
+        sounds[index].play();
+
+        createBubble(index);
+    })
+})
+
+function createBubble(index) {
+    const bubble = document.createElement('div');
+
+    visual.appendChild(bubble);
+    bubble.style.backgroundColor = colors[index];
+    bubble.style.animation = 'fly 1s ease';
 }
