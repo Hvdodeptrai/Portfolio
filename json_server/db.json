@@ -1,9 +1,19 @@
 {
-    "courses": [
-        {
-            "id": 1,
-            "name": "Kiến thức cơ bản, nâng cao dành cho người mới bắt đầu",
-            "description": "Kiến thức cơ bản, nâng cao dành cho người mới bắt đầu"
-        }
-    ]
+  "courses": [
+    {
+      "id": 1,
+      "name": "Kiến thức cơ bản, nâng cao dành cho người mới bắt đầu",
+      "description": "Kiến thức cơ bản, nâng cao dành cho người mới bắt đầu"
+    },
+    {
+      "name": "Nhiều cửa hàng xăng dầu nghỉ bán 2",
+      "description": "1 Nguồn hàng căng thẳng khi Lọc dầu Nghi Sơn giảm công suất, nguồn nhập cũng khó khiến nhiều đại lý xăng dầu muốn bán cầm chừng hoặc nghỉ bán.",
+      "id": 2
+    },
+    {
+      "name": "Nhiều cửa hàng xăng dầu nghỉ bán",
+      "description": "Nguồn hàng căng thẳng khi Lọc dầu Nghi Sơn giảm công suất, nguồn nhập cũng khó khiến nhiều đại lý xăng dầu muốn bán cầm chừng hoặc nghỉ bán.",
+      "id": 3
+    }
+  ]
 }

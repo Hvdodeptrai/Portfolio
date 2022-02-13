@@ -10,63 +10,8 @@ body {
     font-family: "Poppins";
     font-size: 1em;
     background-color: #fff;
-    position: relative;
-    min-height: 100vh;
+    overflow: hidden;
 }
-.music {
-
-}
-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.title h1 {
-    text-align: center;
-    font-size: 2em;
-}
-.title {
-    padding: 2em 0;
-}
-
-
-.pads {
-    width: 100%;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-
-}
-.pads > div {
-    width: 100px;
-    height: 100px;
-    flex: 1;
-    cursor: pointer;
-}
-.pad1 {background-color: aqua;} .pad2 {background-color: blue;} 
-.pad3 {background-color: blueviolet;} .pad4 {background-color: yellow;}
-.pad5 {background-color: coral;} .pad6 {background-color: red;}
-
-@keyframes fly {
-    0% {
-        bottom: 0;
-        left: 20%;
-    }
-    50% {
-        bottom: 50%;
-        left: 50%;
-    }
-    100% {
-        bottom: 0%;
-        left: 80%;
-    }
-}
-
-.visual > div {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    bottom: 0;
+canvas {
+    background-color: blueviolet;
 }
