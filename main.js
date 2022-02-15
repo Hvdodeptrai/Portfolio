@@ -1,107 +1,54 @@
 const canvas = document.querySelector('canvas');
-
 const c = canvas.getContext('2d');
-canvas.style.background = 'white';
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
-const mouse = {
-    x: innerWidth / 2,
-    y: innerHeight / 2
-}
+const bird = new Image();
+bird.src = './images/bird.png';
+let birdX = 20;
+const interval = birdSize = 24;
 
-const colors = [ '#9b5de5',  '#f15bb5', '#fee440', '#00bbf9', '#00f5d4'];
+const pipeWidth = topPipeBottomY = 24;
 
-window.addEventListener('mousemove', e => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
+let birdY = pipeGap = 200;
+let dy = score = bestScore = 0;
+let canvasSize = pipeX = 400;
 
-    document.querySelector('audio').play();
-})
+canvas.onclick = () => (dy = 9)
 
-window.addEventListener('resize', () => {
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
-
-    init();
-})
-
-
-function randomColor(colors) {
-    return colors[Math.floor(Math.random() * colors.length)];
-}
-
-class Particle {
-    constructor(x, y, radius, color, velocity) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-        this.color = color;
-        this.velocity = velocity;
-        this.ttl = 1000;
-    }
-
-    draw() {
-        c.beginPath();
-        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        c.fillStyle = this.color;
-        c.fill();
-        c.closePath();
-    }
-
-    update() {
-
-        this.x += this.velocity.x;
-        this.y += this.velocity.y;
-        this.ttl--;
-        this.draw();
-    }
-
-}
-
-var particles;
-
-function init() {
-    particles = [];
-}
-
-let hue = 0;
-let hueRadians = 0;
-const particleCount = 40;
-const power = 1;
-
-function generateRing() {
-    setTimeout(generateRing, 300);
-    hue = Math.sin(hueRadians);
-
-    for(let i = 0; i < particleCount; i++) {
-        const radian = Math.PI * 2 / 30;
-        const x = mouse.x;
-        const y = mouse.y;
-        particles.push(new Particle(x, y, 10, `hsl(${Math.abs(hue * 360)}, 50%, 50%)`, {
-            x: Math.cos(radian * i) * power,
-            y: Math.sin(radian * i) * power
-        }));
-    }
-    console.log(hue * 360);
-    console.log(particles);
-    hueRadians += .01;
-}
-
-function animate() {
-    requestAnimationFrame(animate);
-    c.fillStyle = 'rgba(0, 0, 0, .1)';
+setInterval(() => {
+    c.beginPath();
+    c.fillStyle = 'skyblue';
     c.fillRect(0, 0, canvas.width, canvas.height);
+    birdY -= dy -= .5;
+    c.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize);
+    c.closePath();
 
-    particles.forEach((particle, i) => {
-        if(particle.ttl < 0) {
-            particles.splice(i, 1);
-        } else {
-            particle.update();
-        }
-    })
-}
+    c.beginPath();
+    pipeX -= 8;
+    if(pipeX < -pipeWidth) {
+        pipeX = canvas.width;
+        topPipeBottomY = pipeGap * Math.random();
+    }
+    c.fillStyle = 'green';
+    c.fillRect(pipeX, 0, pipeWidth, topPipeBottomY);
+    c.fillRect(pipeX, topPipeBottomY + pipeGap, pipeWidth, canvas.height);
+    c.closePath();
 
-init();
-animate();
-generateRing();
+    c.beginPath();
+    c.fillStyle = 'black';
+    c.fillText(score++, 9, 25);
+    bestScore = bestScore < score ? score : bestScore;
+    c.fillText(`Best: ${bestScore}`, 9, 50);
+    c.closePath();
+
+    if(birdY > topPipeBottomY + pipeGap
+        && pipeX < birdSize * (524/374) || birdY > canvas.height
+        || birdY < topPipeBottomY
+        && pipeX < birdSize * (524/374)) {
+        dy = 0;
+        birdY = 200;
+        pipeX = canvas.width;
+        score = 0;
+    }
+}, 24);
